@@ -30,6 +30,10 @@ body {
     background-color: #5357B6;
     border-radius: 2px;
 }
+
+.hidden {
+    display: flex
+}
 /* ********************* GENERAL CSS (END) ********************* */
 
 
