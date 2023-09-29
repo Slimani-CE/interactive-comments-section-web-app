@@ -1,0 +1,269 @@
+/* ********************* GENERAL CSS (START) ********************* */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    width: 100%;
+    padding: 64px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #F5F6FA;
+}
+
+.mention {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #5357B6;
+    cursor: pointer;
+}
+
+.you {
+    padding: 3px 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    background-color: #5357B6;
+    border-radius: 2px;
+}
+/* ********************* GENERAL CSS (END) ********************* */
+
+
+/* ********************* CONTAINER CSS (START) ********************* */
+.container {
+    width: 730px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+/* ********************* CONTAINER CSS (END) ********************* */
+
+
+/* ********************* COMMENTS CONTAINER CSS (START) ********************* */
+.container .comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.container .comments .comment-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+/* ********************* COMMENTS CONTAINER CSS (END) ********************* */
+
+
+/* ********************* COMMENT CSS (START) ********************* */
+.container .comments .comment-container .comment {
+    width: 100%;
+    height: 167px;
+    border-radius: 8px;
+    padding: 24px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 'voting details settings' 'voting content content';
+    row-gap: 15px;
+    column-gap: 24px;
+}
+
+.container .comments .comment-container .comment .voting {
+    width: 40px;
+    height: 100px;
+    grid-area: voting;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F6FA;
+    border-radius: 10px;
+    padding: 10px;  
+}
+
+.container .comments .comment-container .comment .voting > span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #5357B6;
+}
+
+.container .comments .comment-container .comment .voting button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container .comments .comment-container .comment .voting button:hover svg path{
+    fill: #5357B6;
+}
+
+.container .comments .comment-container .comment .comment-details {
+    grid-area: details;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.container .comments .comment-container .comment .comment-details img {
+    width: 32px;
+}
+
+.container .comments .comment-container .comment .comment-details .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #334253;
+}
+
+.container .comments .comment-container .comment .comment-details .date {
+    font-size: 16px;
+    line-height: 24px;
+    color: #67727E;
+}
+
+.container .comments .comment-container .comment .content {
+    grid-area: content;
+    font-size: 16px;
+    line-height: 24px;
+    color: #67727E;
+}
+
+.container .comments .comment-container .comment .settings {
+    grid-area: settings;
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+.container .comments .comment-container .comment .settings.reply > span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #5357B6;
+    margin-left: 5px;
+}
+
+.container .comments .comment-container .comment .settings.reply:hover span {
+    color: #C5C6EF;
+}
+
+.container .comments .comment-container .comment .settings.reply:hover svg path{
+    fill : #C5C6EF
+}
+
+.container .comments .comment-container .comment .settings .edit {
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #5357B6;
+}
+
+.container .comments .comment-container .comment .settings .edit:hover span {
+    color: #C5C6EF;
+}
+
+.container .comments .comment-container .comment .settings .edit:hover svg path{
+    fill : #C5C6EF
+}
+
+
+.container .comments .comment-container .comment .settings .delete:hover span {
+    color: #FFB8BB;
+}
+
+.container .comments .comment-container .comment .settings .delete:hover svg path{
+    fill : #FFB8BB
+}
+
+.container .comments .comment-container .comment .settings .delete > span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ED6368;
+}
+
+.container .comments .comment-container .replies-container {
+    display: flex;
+}
+
+.container .comments .comment-container .replies-container::before {
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #E9EBF0;
+    margin: 0 40px;
+}
+
+.container .comments .comment-container .replies-container .replies {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+/* ********************* COMMENT CSS (END) ********************* */
+
+
+/* ********************* REPLY CSS (START) ********************* */
+.reply-container {
+    width: 100%;
+    height: 144px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    justify-content: stretch;
+    column-gap: 16px;
+}
+
+.reply-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.reply-container textarea {
+    border: 1px solid #E9EBF0;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+    line-height: 24px;
+    color: #334253;
+    flex: 1;
+}
+
+.reply-container textarea::placeholder {
+    color: #67727E;
+}
+
+.reply-container textarea:focus {
+    border: 1px solid #5357B6;
+    outline: none;
+}
+
+.reply-container button {
+    width: 104px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    background-color: #5357B6;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.reply-container button:hover {
+    background-color: #C5C6EF;
+}
+/* ********************* REPLY CSS (END) ********************* */
